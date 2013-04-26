@@ -1,0 +1,32 @@
+LIBVIRT_TYPE=qemu
+IMAGE_URLS="http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-uec.tar.gz,http://uec-images.ubuntu.com/precise/current/precise-server-cloudimg-amd64.tar.gz"
+
+ENABLED_SERVICES=g-api,g-reg,key,n-api,n-crt,n-cpu,n-net,n-cond,cinder,c-sch,c-api,c-shr,c-vol,n-sch,n-cauth,rabbit,$DATABASE_TYPE
+
+GRIZZLY_TAG=2013.1.g3
+
+CINDER_REPO=${GIT_BASE}/rushiagr/cinder
+CINDER_BRANCH=shares-service
+
+CINDERCLIENT_REPO=${GIT_BASE}/rushiagr/python-cinderclient
+CINDERCLIENT_BRANCH=shares-service
+
+NOVA_BRANCH=${GRIZZLY_TAG}
+
+GLANCE_BRANCH=${GRIZZLY_TAG}
+
+KEYSTONE_BRANCH=${GRIZZLY_TAG}
+
+## Cinder File System Sharing extension currently supports two types of
+## backends, plain LVM and NetApp 
+#SHARE_DRIVER=cinder.share.drivers.netapp.NetAppShareDriver
+SHARE_DRIVER=cinder.share.drivers.lvm.LVMShareDriver
+
+## the parameters below are used to configure the NetApp driver
+#NETAPP_DFM_IP=<netapp-box-hostname>
+#NETAPP_SHARE_DFM_LOGIN=<netapp-box-login>
+#NETAPP_SHARE_DFM_PASSWORD=<netapp-box-password>
+
+## when using LVM driver there're 2 options to manipulate the SAMBA daemon
+CIFS_HELPER=cinder.share.drivers.lvm.CIFSNetConfHelper
+#CIFS_HELPER=cinder.share.drivers.lvm.CIFSHelper
