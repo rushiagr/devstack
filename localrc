@@ -3,7 +3,7 @@ IMAGE_URLS="http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-uec.tar.g
 
 ENABLED_SERVICES=g-api,g-reg,key,n-api,n-crt,n-cpu,n-net,n-cond,cinder,c-sch,c-api,c-shr,c-vol,n-sch,n-cauth,rabbit,$DATABASE_TYPE
 
-GRIZZLY_TAG=2013.1.g3
+#GRIZZLY_TAG=2013.1.g3
 
 CINDER_REPO=${GIT_BASE}/rushiagr/cinder
 CINDER_BRANCH=shares-service
@@ -11,11 +11,11 @@ CINDER_BRANCH=shares-service
 CINDERCLIENT_REPO=${GIT_BASE}/rushiagr/python-cinderclient
 CINDERCLIENT_BRANCH=shares-service
 
-NOVA_BRANCH=${GRIZZLY_TAG}
+#NOVA_BRANCH=${GRIZZLY_TAG}
 
-GLANCE_BRANCH=${GRIZZLY_TAG}
+#GLANCE_BRANCH=${GRIZZLY_TAG}
 
-KEYSTONE_BRANCH=${GRIZZLY_TAG}
+#KEYSTONE_BRANCH=${GRIZZLY_TAG}
 
 ## Cinder File System Sharing extension currently supports two types of
 ## backends, plain LVM and NetApp 
