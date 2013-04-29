@@ -1,7 +1,7 @@
 LIBVIRT_TYPE=qemu
 IMAGE_URLS="http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-uec.tar.gz,http://uec-images.ubuntu.com/precise/current/precise-server-cloudimg-amd64.tar.gz"
 
-ENABLED_SERVICES=g-api,g-reg,key,n-api,n-crt,n-cpu,n-net,n-cond,cinder,c-sch,c-api,c-shr,c-vol,n-sch,n-cauth,rabbit,$DATABASE_TYPE
+ENABLED_SERVICES=g-api,g-reg,key,n-api,n-crt,n-cpu,n-net,n-cond,cinder,c-sch,c-api,c-shr,c-vol,n-sch,n-cauth,rabbit,mysql
 
 #GRIZZLY_TAG=2013.1.g3
 
