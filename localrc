@@ -3,10 +3,10 @@ IMAGE_URLS="http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-uec.tar.g
 
 ENABLED_SERVICES=g-api,g-reg,key,n-api,n-crt,n-cpu,n-net,n-cond,cinder,c-sch,c-api,c-shr,c-vol,n-sch,n-cauth,rabbit,mysql
 
-CINDER_REPO=${GIT_BASE}/rushiagr/cinder
+CINDER_REPO=https://github.com/rushiagr/cinder
 CINDER_BRANCH=shares-service
 
-CINDERCLIENT_REPO=${GIT_BASE}/rushiagr/python-cinderclient
+CINDERCLIENT_REPO=https://github.com/rushiagr/python-cinderclient
 CINDERCLIENT_BRANCH=shares-service
 
 
