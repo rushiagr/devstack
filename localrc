@@ -1,7 +1,7 @@
 LIBVIRT_TYPE=qemu
 IMAGE_URLS="http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-uec.tar.gz,http://uec-images.ubuntu.com/precise/current/precise-server-cloudimg-amd64.tar.gz"
 
-ENABLED_SERVICES=g-api,g-reg,key,n-api,n-crt,n-cpu,n-net,n-cond,cinder,c-sch,c-api,c-shr,c-vol,n-sch,n-cauth,rabbit,mysql
+#ENABLED_SERVICES=g-api,g-reg,key,n-api,n-crt,n-cpu,n-net,n-cond,cinder,c-sch,c-api,c-shr,c-vol,n-sch,n-cauth,rabbit,mysql
 
 CINDER_REPO=https://github.com/rushiagr/cinder
 CINDER_BRANCH=shares-service
@@ -23,3 +23,10 @@ SHARE_DRIVER=cinder.share.drivers.lvm.LVMShareDriver
 ## when using LVM driver there're 2 options to manipulate the SAMBA daemon
 CIFS_HELPER=cinder.share.drivers.lvm.CIFSNetConfHelper
 #CIFS_HELPER=cinder.share.drivers.lvm.CIFSHelper
+
+# Default passwords so that the stack.sh doesnt ask for them
+DATABASE_PASSWORD=nova
+RABBIT_PASSWORD=nova
+SERVICE_TOKEN=nova
+SERVICE_PASSWORD=nova
+ADMIN_PASSWORD=nova
