@@ -13,13 +13,13 @@ CINDERCLIENT_BRANCH=shares-service
 
 ## Cinder File System Sharing extension currently supports two types of
 ## backends, plain LVM and NetApp 
-SHARE_DRIVER=cinder.share.drivers.netapp.NetAppShareDriver
-#SHARE_DRIVER=cinder.share.drivers.lvm.LVMShareDriver
+#SHARE_DRIVER=cinder.share.drivers.netapp.NetAppShareDriver
+SHARE_DRIVER=cinder.share.drivers.lvm.LVMShareDriver
 
 ## the parameters below are used to configure the NetApp driver
-NETAPP_DFM_IP=10.61.173.124
-NETAPP_SHARE_DFM_LOGIN=Administrator
-NETAPP_SHARE_DFM_PASSWORD=Cartoon1
+#NETAPP_DFM_IP=10.61.173.124
+#NETAPP_SHARE_DFM_LOGIN=Administrator
+#NETAPP_SHARE_DFM_PASSWORD=Cartoon1
 
 ## when using LVM driver there're 2 options to manipulate the SAMBA daemon
 CIFS_HELPER=cinder.share.drivers.lvm.CIFSNetConfHelper
