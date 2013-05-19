@@ -31,3 +31,7 @@ RABBIT_PASSWORD=nova
 SERVICE_TOKEN=nova
 SERVICE_PASSWORD=nova
 ADMIN_PASSWORD=nova
+
+
+# Log screen output into /opt/stack/logs 
+SCREEN_LOGDIR=/opt/stack/logs
